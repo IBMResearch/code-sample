@@ -13,7 +13,7 @@ import '../../highlightjs/highlight.pack.min.js';
  * @demo https://kcmr.github.io/code-sample/
  */
 class CodeSample extends LitElement {
-  _render({copyClipboardButton}) {
+  render() {
     return html`
       ${styles}
       ${this.theme || oneDark}
@@ -23,15 +23,15 @@ class CodeSample extends LitElement {
 
       <div id="code-container">
         <button id="copy-button"
-          hidden?="${!copyClipboardButton}"
+          ?hidden="${!this.copyClipboardButton}"
           title="Copy to clipboard"
-          on-click="${() => this._copyToClipboard()}">Copy</button>
+          @click="${() => this._copyToClipboard()}">Copy</button>
         <pre id="code"></pre>
       </div>
     `;
   }
 
-  _firstRendered() {
+  firstUpdated() {
     this.$_content = this.shadowRoot.querySelector('#content');
     this.$_code = this.shadowRoot.querySelector('#code');
     this.$_copyButton = this.shadowRoot.querySelector('#copy-button');
@@ -41,24 +41,15 @@ class CodeSample extends LitElement {
   static get properties() {
     return {
       // Set to true to show a copy to clipboard button.
-      copyClipboardButton: Boolean,
+      copyClipboardButton: {type: Boolean, attribute: 'copy-clipboard-button'},
       // Tagged template literal with custom styles.
-      theme: String,
+      theme: {type: String},
       // Set to true to render the code inside the template.
-      render: Boolean,
+      renderTemplate: {type: Boolean, attribute: 'render-template'},
       // Code type (optional). (eg.: html, js, css)
       // Options are the same as the available classes for `<code>` tag using highlight.js
-      type: String,
+      type: {type: String},
     };
-  }
-
-  static get observedAttributes() {
-    return [
-      'copy-clipboard-button',
-      'render',
-      'type',
-      'theme',
-    ];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -98,7 +89,7 @@ class CodeSample extends LitElement {
 
     const template = this._getCodeTemplate();
 
-    if (this.render) {
+    if (this.renderTemplate) {
       this._demo = this.$_demo.appendChild(
         document.importNode(template.content, true)
       );
