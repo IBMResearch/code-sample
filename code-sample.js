@@ -25,7 +25,7 @@ class CodeSample extends LitElement {
         <button id="copy-button"
           ?hidden="${!this.copyClipboardButton}"
           title="Copy to clipboard"
-          @click="${() => this._copyToClipboard()}">Copy</button>
+          @click="${this._copyToClipboard}">Copy</button>
         <pre id="code"></pre>
       </div>
     `;
