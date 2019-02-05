@@ -21,9 +21,9 @@
   "author": "Kus Cámara <kus.camara@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@polymer/lit-element": "0.6.2",
-    "@polymer/polymer": "^3.0.0",
-    "highlightjs": "^9.10.0"
+    "@polymer/polymer": "^3.1.0",
+    "highlightjs": "^9.10.0",
+    "lit-element": "2.0.0-rc.5"
   },
   "devDependencies": {
     "@webcomponents/webcomponentsjs": "^2.0.0",

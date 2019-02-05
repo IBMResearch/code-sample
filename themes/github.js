@@ -1,4 +1,4 @@
-import { html } from '../../../@polymer/lit-element/lit-element.js';
+import { html } from '../../../lit-element/lit-element.js';
 
 export const github = html`
 <style>

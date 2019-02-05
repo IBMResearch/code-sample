@@ -1,12 +1,12 @@
 # &lt;code-sample&gt;
-[![Build Status](https://img.shields.io/travis/kcmr/code-sample/master.svg?style=flat-square)](https://travis-ci.org/kcmr/code-sample) 
+[![Build Status](https://img.shields.io/travis/kcmr/code-sample/master.svg?style=flat-square)](https://travis-ci.org/kcmr/code-sample)
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg?style=flat-square)](https://www.webcomponents.org/element/@kuscamara/code-sample)
 [![npm version](https://badge.fury.io/js/%40kuscamara%2Fcode-sample.svg)](https://badge.fury.io/js/%40kuscamara%2Fcode-sample)
 ![Polymer 3](https://img.shields.io/badge/Polymer-3-green.svg)
 
 > A wrapper element for [highlight.js](https://highlightjs.org/)
 
-A themeable sample code snippet that uses [highlight.js](https://highlightjs.org/) for syntax highlighting.   
+A themeable sample code snippet that uses [highlight.js](https://highlightjs.org/) for syntax highlighting.
 Forget to worry about spaces, indentation, HTML entities, etc.
 
 ```html
@@ -174,7 +174,7 @@ The shared style should be exported as a tagged template literal.
 Example:
 
 ```js
-import { html } from '../../../@polymer/lit-element/lit-element.js';
+import { html } from '../../../lit-element/lit-element.js';
 
 export const myOwnTheme = html`
 <style>
@@ -210,7 +210,7 @@ The following custom CSS properties are available for styling:
 | --code-sample-code-container-hover-button | empty mixin applied to the copy to clipboard button when the code container on :hover | {}                                                                   |
 | --code-sample-copy-clipboard-button       | empty mixin applied to the copy to clipboard button                                   | {}                                                                   |
 
-Included themes contain custom CSS properties to set the background and text color.   
+Included themes contain custom CSS properties to set the background and text color.
 You may need to add these CSS properties to your own themes.
 
 | Custom property                | Description                             | Default     |

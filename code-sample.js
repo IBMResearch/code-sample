@@ -1,4 +1,4 @@
-import { LitElement, html } from '../../@polymer/lit-element/lit-element.js';
+import { LitElement, html } from '../../lit-element/lit-element.js';
 import { FlattenedNodesObserver } from '../../@polymer/polymer/lib/utils/flattened-nodes-observer.js';
 import { styles } from './styles.js';
 import { oneDark } from './themes/one-dark.js';
